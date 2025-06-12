@@ -84,7 +84,28 @@ def get_link(value):
         return "Unknown"
 
 def format_item(item):
+    nickname_map = { # some nicknames/variations seen around the subreddit.
+        "banana": "gros michel",
+        "oops! all sixes": "oops! all 6s",
+        "oops, all sixes": "oops! all 6s",
+        "oops all sixes": "oops! all 6s",
+        "eight ball": "8 ball",
+        "cloud nine": "cloud 9",
+        "bean": "turtle bean",
+        "jonkler": "joker",
+        "jimbo": "joker",
+        "cat": "lucky cat",
+        "sock": "sock and buskin",
+        "sock n buskin": "sock and buskin",
+        "stencil": "joker stencil",
+        "pants": "spare trousers",
+        "spare pants": "spare trousers"
+    }
     item = item.lower().strip()
     if item.startswith("the "):
         item = item[4:]
+    if item.endswith(" joker"):
+        item = item[:-6]
+    if item in nickname_map:
+        item = nickname_map[item]
     return item

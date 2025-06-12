@@ -25,3 +25,9 @@ def test_build_reply_with_items():
     assert ("[Ankh](http://localhost:8080/Spectral_Cards) (Spectral Card)" in build_reply_with_items(["ankh"])) is True
     assert ("[The Arm](http://localhost:8080/Blinds_and_Antes) (Blind)" in build_reply_with_items(["arm"])) is True
     assert ("[Eris](http://localhost:8080/Planet_Cards) (Planet Card)" in build_reply_with_items(["eris"])) is True
+    assert ("[Gros Michel](http://localhost:8080/Gros_Michel) (Common Joker)" in build_reply_with_items(["banana"])) is True
+    assert ("[Wee Joker](http://localhost:8080/Wee_Joker) (Rare Joker)" in build_reply_with_items(["wee"])) is True
+    assert ("[Joker Stencil](http://localhost:8080/Joker_Stencil) (Uncommon Joker)" in build_reply_with_items(["stencil"])) is True
+    assert ("[Turtle Bean](http://localhost:8080/Turtle_Bean) (Uncommon Joker)" in build_reply_with_items(["bean"])) is True
+    assert ("[Wily Joker](http://localhost:8080/Wily_Joker) (Common Joker)" in build_reply_with_items(["wily"])) is True
+    assert ("[Cloud 9](http://localhost:8080/Cloud_9) (Uncommon Joker)" in build_reply_with_items(["cloud nine"])) is True
