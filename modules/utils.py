@@ -99,13 +99,9 @@ def format_item(item):
         "sock n buskin": "sock and buskin",
         "stencil": "joker stencil",
         "pants": "spare trousers",
-        "spare pants": "spare trousers"
+        "spare pants": "spare trousers",
+        "trib": "triboulet",
+        "vessel": "violet vessel",
     }
-    item = item.lower().strip()
-    if item.startswith("the "):
-        item = item[4:]
-    if item.endswith(" joker"):
-        item = item[:-6]
-    if item in nickname_map:
-        item = nickname_map[item]
-    return item
+    item = item.lower().strip().removeprefix("the ").removesuffix(" joker")
+    return nickname_map.get(item, item)
