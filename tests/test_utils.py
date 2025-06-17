@@ -31,3 +31,6 @@ def test_build_reply_with_items():
     assert ("[Turtle Bean](http://localhost:8080/Turtle_Bean) (Uncommon Joker)" in build_reply_with_items(["bean"])) is True
     assert ("[Wily Joker](http://localhost:8080/Wily_Joker) (Common Joker)" in build_reply_with_items(["wily"])) is True
     assert ("[Cloud 9](http://localhost:8080/Cloud_9) (Uncommon Joker)" in build_reply_with_items(["cloud nine"])) is True
+    assert ("[Red Deck](http://localhost:8080/Decks) (Deck)" in build_reply_with_items(["red deck"])) is True
+    assert ("[Plasma Deck](http://localhost:8080/Decks) (Deck)" in build_reply_with_items(["plasma deck"])) is True
+    assert ("[Ghost Deck](http://localhost:8080/Decks) (Deck)" in build_reply_with_items(["ghost deck"])) is True
