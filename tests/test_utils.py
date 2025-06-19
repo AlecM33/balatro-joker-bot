@@ -13,7 +13,7 @@ def test_parse_items_from_comment():
     assert [] == parse_items_from_comment("[[]], [[]]")
 
 def test_build_reply_with_items():
-    os.environ["FANDOM_LINK"] = "http://localhost:8080/"
+    os.environ["WIKI_LINK"] = "http://localhost:8080/"
     os.environ["MAX_DISTANCE"] = "2"
     assert ("[Showman](http://localhost:8080/Showman) (Uncommon Joker)" in build_reply_with_items(["showman"])) is True
     assert ("[Showman](http://localhost:8080/Showman) (Uncommon Joker)" in build_reply_with_items(["showman", "perkeo"])

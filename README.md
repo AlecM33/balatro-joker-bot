@@ -3,7 +3,7 @@ A Reddit bot that monitors a subreddit and replies with Balatro info to Reddit c
 
 The bot uses PRAW's [Subreddit stream](https://praw.readthedocs.io/en/stable/code_overview/other/subredditstream.html) feature to observe and reply to comments in nearly real-time. It uses fuzzy string matching via Levenshtein distance to get the closest Joker/Tarot/etc. and remove the need for exact spelling.
 
-I sourced the information from Balatro's files and version controlled it here to avoid any web scraping. The bot still provides a link to the Fandom wiki page for a given item, so users can see an image and an expanded description.
+I sourced the information from Balatro's files and version controlled it here to avoid any web scraping. The bot still provides a link to https://balatrowiki.org/ for a given item, so users can see an image and an expanded description.
 
 With the comment stream, a main concern is rate limiting. Reddit allows 1000 requests/10 min. So far when spectating r/balatro with the bot I have not seen the remaining quota dip below 800 or so, so hopefully that will be more than enough for a while.
 

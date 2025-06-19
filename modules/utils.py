@@ -72,19 +72,23 @@ def get_item_unlock(value):
 
 def get_link(value):
     if value["key"].startswith("j_"):
-        return os.environ['FANDOM_LINK'] + value["match"]["name"].replace(" ", "_")
+        return os.environ['WIKI_LINK'] + value["match"]["name"].replace(" ", "_")
     elif value["key"].startswith("bl_"):
-        return os.environ['FANDOM_LINK'] + "Blinds_and_Antes"
+        return os.environ['WIKI_LINK'] + "Blinds_and_Antes"
     elif value["key"].startswith("s_"):
-        return os.environ['FANDOM_LINK'] + "Spectral_Cards"
+        return os.environ['WIKI_LINK'] + "Spectral_Cards"
     elif value["key"].startswith("t_"):
-        return os.environ['FANDOM_LINK'] + "Tarot_Cards"
+        return os.environ['WIKI_LINK'] + "Tarot_Cards"
     elif value["key"].startswith("v_"):
-        return os.environ['FANDOM_LINK'] + "Vouchers"
+        return os.environ['WIKI_LINK'] + "Vouchers"
     elif value["key"].startswith("p_"):
+<<<<<<< Updated upstream
         return os.environ['FANDOM_LINK'] + "Planet_Cards"
     elif value["key"].startswith("d_"):
         return os.environ['FANDOM_LINK'] + "Decks"
+=======
+            return os.environ['WIKI_LINK'] + "Planet_Cards"
+>>>>>>> Stashed changes
     else:
         return "Unknown"
 
