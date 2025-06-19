@@ -71,22 +71,7 @@ def get_item_unlock(value):
 
 
 def get_link(value):
-    if value["key"].startswith("j_"):
-        return os.environ['WIKI_LINK'] + value["match"]["name"].replace(" ", "_")
-    elif value["key"].startswith("bl_"):
-        return os.environ['WIKI_LINK'] + "Blinds_and_Antes"
-    elif value["key"].startswith("s_"):
-        return os.environ['WIKI_LINK'] + "Spectral_Cards"
-    elif value["key"].startswith("t_"):
-        return os.environ['WIKI_LINK'] + "Tarot_Cards"
-    elif value["key"].startswith("v_"):
-        return os.environ['WIKI_LINK'] + "Vouchers"
-    elif value["key"].startswith("p_"):
-        return os.environ['WIKI_LINK'] + "Planet_Cards"
-    elif value["key"].startswith("d_"):
-        return os.environ['WIKI_LINK'] + "Decks"
-    else:
-        return "Unknown"
+    return os.environ['WIKI_LINK'] + value["match"]["name"].replace(" ", "_")
 
 def format_item(item):
     nickname_map = { # some nicknames/variations seen around the subreddit.

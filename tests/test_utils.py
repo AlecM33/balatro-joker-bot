@@ -20,17 +20,17 @@ def test_build_reply_with_items():
             and "[Perkeo](http://localhost:8080/Perkeo) (Legendary Joker)" in build_reply_with_items(["showman", "perkeo"])) is True
     assert ("[Cavendish](http://localhost:8080/Cavendish) (Common Joker)" in build_reply_with_items(["caevendishh"])) is True
     assert ("" == build_reply_with_items([]))
-    assert ("[Overstock](http://localhost:8080/Vouchers) (Voucher)" in build_reply_with_items(["overstock"])) is True
-    assert ("[The Magician](http://localhost:8080/Tarot_Cards) (Tarot Card)" in build_reply_with_items(["magician"])) is True
-    assert ("[Ankh](http://localhost:8080/Spectral_Cards) (Spectral Card)" in build_reply_with_items(["ankh"])) is True
-    assert ("[The Arm](http://localhost:8080/Blinds_and_Antes) (Blind)" in build_reply_with_items(["arm"])) is True
-    assert ("[Eris](http://localhost:8080/Planet_Cards) (Planet Card)" in build_reply_with_items(["eris"])) is True
+    assert ("[Overstock](http://localhost:8080/Overstock) (Voucher)" in build_reply_with_items(["overstock"])) is True
+    assert ("[The Magician](http://localhost:8080/The_Magician) (Tarot Card)" in build_reply_with_items(["magician"])) is True
+    assert ("[Ankh](http://localhost:8080/Ankh) (Spectral Card)" in build_reply_with_items(["ankh"])) is True
+    assert ("[The Arm](http://localhost:8080/The_Arm) (Blind)" in build_reply_with_items(["arm"])) is True
+    assert ("[Eris](http://localhost:8080/Eris) (Planet Card)" in build_reply_with_items(["eris"])) is True
     assert ("[Gros Michel](http://localhost:8080/Gros_Michel) (Common Joker)" in build_reply_with_items(["banana"])) is True
     assert ("[Wee Joker](http://localhost:8080/Wee_Joker) (Rare Joker)" in build_reply_with_items(["wee"])) is True
     assert ("[Joker Stencil](http://localhost:8080/Joker_Stencil) (Uncommon Joker)" in build_reply_with_items(["stencil"])) is True
     assert ("[Turtle Bean](http://localhost:8080/Turtle_Bean) (Uncommon Joker)" in build_reply_with_items(["bean"])) is True
     assert ("[Wily Joker](http://localhost:8080/Wily_Joker) (Common Joker)" in build_reply_with_items(["wily"])) is True
     assert ("[Cloud 9](http://localhost:8080/Cloud_9) (Uncommon Joker)" in build_reply_with_items(["cloud nine"])) is True
-    assert ("[Red Deck](http://localhost:8080/Decks) (Deck)" in build_reply_with_items(["red deck"])) is True
-    assert ("[Plasma Deck](http://localhost:8080/Decks) (Deck)" in build_reply_with_items(["plasma deck"])) is True
-    assert ("[Ghost Deck](http://localhost:8080/Decks) (Deck)" in build_reply_with_items(["ghost deck"])) is True
+    assert ("[Red Deck](http://localhost:8080/Red_Deck) (Deck)" in build_reply_with_items(["red deck"])) is True
+    assert ("[Plasma Deck](http://localhost:8080/Plasma_Deck) (Deck)" in build_reply_with_items(["plasma deck"])) is True
+    assert ("[Ghost Deck](http://localhost:8080/Ghost_Deck) (Deck)" in build_reply_with_items(["ghost deck"])) is True
