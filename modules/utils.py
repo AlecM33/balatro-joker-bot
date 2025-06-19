@@ -82,9 +82,9 @@ def get_link(value):
     elif value["key"].startswith("v_"):
         return os.environ['WIKI_LINK'] + "Vouchers"
     elif value["key"].startswith("p_"):
-        return os.environ['FANDOM_LINK'] + "Planet_Cards"
+        return os.environ['WIKI_LINK'] + "Planet_Cards"
     elif value["key"].startswith("d_"):
-        return os.environ['FANDOM_LINK'] + "Decks"
+        return os.environ['WIKI_LINK'] + "Decks"
     else:
         return "Unknown"
 
