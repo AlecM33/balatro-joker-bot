@@ -13,8 +13,9 @@ import re
 def build_reply_with_items(items_from_comment):
     matches_per_item = {}
     levenshtein_start = time.time()
-    for key, value in (jokers | blinds | spectrals | tarots | vouchers | planets | decks).items():
-        for requested_item in items_from_comment:
+    
+    for requested_item in items_from_comment:
+        for key, value in (jokers | blinds | spectrals | tarots | vouchers | planets | decks).items():
             item_distance = distance(format_item(value["name"]), format_item(requested_item), score_cutoff=int(os.environ["MAX_DISTANCE"]))
             if item_distance <= int(os.environ["MAX_DISTANCE"]):
                 if not requested_item in matches_per_item:
