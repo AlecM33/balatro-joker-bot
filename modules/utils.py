@@ -5,6 +5,7 @@ from modules.tarots import tarots
 from modules.vouchers import vouchers
 from modules.planets import planets
 from modules.decks import decks
+from modules.stakes import stakes
 from Levenshtein import distance
 import time
 import os
@@ -13,9 +14,9 @@ import re
 def build_reply_with_items(items_from_comment):
     matches_per_item = {}
     levenshtein_start = time.time()
-    
+
     for requested_item in items_from_comment:
-        for key, value in (jokers | blinds | spectrals | tarots | vouchers | planets | decks).items():
+        for key, value in (jokers | blinds | spectrals | tarots | vouchers | planets | decks | stakes).items():
             item_distance = distance(format_item(value["name"]), format_item(requested_item), score_cutoff=int(os.environ["MAX_DISTANCE"]))
             if item_distance <= int(os.environ["MAX_DISTANCE"]):
                 if not requested_item in matches_per_item:
@@ -61,12 +62,16 @@ def get_item_label(value):
         return "Planet Card"
     elif value["key"].startswith("d_"):
         return "Deck"
+    elif value["key"].startswith("st_"):
+        return "Stake"
     else:
         return "Unknown"
 
 def get_item_unlock(value):
     if value["key"].startswith("j_") or value["key"].startswith("v_") or value["key"].startswith("d_"):
         return f"- **To Unlock**: {value['match']['unlock'] if 'unlock' in value['match'] else 'Available by default'}\n\n"
+    elif value["key"].startswith("st_"):
+        return f"- **Unlocks on Win**: {value['match']['unlocks'] if 'unlocks' in value['match'] else 'None'}\n\n"
     else:
         return f"\n"
 

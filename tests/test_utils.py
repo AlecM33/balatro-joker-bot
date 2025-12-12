@@ -34,3 +34,13 @@ def test_build_reply_with_items():
     assert ("[Red Deck](http://localhost:8080/Red_Deck) (Deck)" in build_reply_with_items(["red deck"])) is True
     assert ("[Plasma Deck](http://localhost:8080/Plasma_Deck) (Deck)" in build_reply_with_items(["plasma deck"])) is True
     assert ("[Ghost Deck](http://localhost:8080/Ghost_Deck) (Deck)" in build_reply_with_items(["ghost deck"])) is True
+
+    # Stakes
+    assert ("[White Stake](http://localhost:8080/White_Stake) (Stake)" in build_reply_with_items(["white stake"])) is True
+    assert ("[Red Stake](http://localhost:8080/Red_Stake) (Stake)" in build_reply_with_items(["red stake"])) is True
+    assert ("[Green Stake](http://localhost:8080/Green_Stake) (Stake)" in build_reply_with_items(["green stake"])) is True
+    assert ("[Black Stake](http://localhost:8080/Black_Stake) (Stake)" in build_reply_with_items(["black stake"])) is True
+    assert ("[Blue Stake](http://localhost:8080/Blue_Stake) (Stake)" in build_reply_with_items(["blue stake"])) is True
+    assert ("[Purple Stake](http://localhost:8080/Purple_Stake) (Stake)" in build_reply_with_items(["purple stake"])) is True
+    assert ("[Orange Stake](http://localhost:8080/Orange_Stake) (Stake)" in build_reply_with_items(["orange stake"])) is True
+    assert ("[Gold Stake](http://localhost:8080/Gold_Stake) (Stake)" in build_reply_with_items(["gold stake"])) is True
