@@ -44,3 +44,12 @@ def test_build_reply_with_items():
     assert ("[Purple Stake](http://localhost:8080/Purple_Stake) (Stake)" in build_reply_with_items(["purple stake"])) is True
     assert ("[Orange Stake](http://localhost:8080/Orange_Stake) (Stake)" in build_reply_with_items(["orange stake"])) is True
     assert ("[Gold Stake](http://localhost:8080/Gold_Stake) (Stake)" in build_reply_with_items(["gold stake"])) is True
+
+    assert ("[Bonus Cards](http://localhost:8080/Bonus_Cards) (Enhancement)" in build_reply_with_items(["bonus card"])) is True
+    assert ("[Mult Cards](http://localhost:8080/Mult_Cards) (Enhancement)" in build_reply_with_items(["mult card"])) is True
+    assert ("[Wild Cards](http://localhost:8080/Wild_Cards) (Enhancement)" in build_reply_with_items(["wild card"])) is True
+    assert ("[Glass Cards](http://localhost:8080/Glass_Cards) (Enhancement)" in build_reply_with_items(["glass card"])) is True
+    assert ("[Steel Cards](http://localhost:8080/Steel_Cards) (Enhancement)" in build_reply_with_items(["steel card"])) is True
+    assert ("[Stone Cards](http://localhost:8080/Stone_Cards) (Enhancement)" in build_reply_with_items(["stone card"])) is True
+    assert ("[Gold Cards](http://localhost:8080/Gold_Cards) (Enhancement)" in build_reply_with_items(["gold card"])) is True
+    assert ("[Lucky Cards](http://localhost:8080/Lucky_Cards) (Enhancement)" in build_reply_with_items(["lucky card"])) is True
