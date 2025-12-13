@@ -118,5 +118,5 @@ def format_item(item):
         "wrathful": "wrathful joker",
         "gluttonous": "gluttonous joker",
     }
-    item = item.lower().strip().removeprefix("the ")
+    item = item.lower().strip().removeprefix("the ").removesuffix(" cards").removesuffix(" card")
     return nickname_map.get(item, item)
