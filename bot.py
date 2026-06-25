@@ -40,7 +40,7 @@ def main():
                 else:
                     print("No items, skipping...")
         except KeyboardInterrupt:
-            logger.info('Shutting down...')
+            print("Shutting down...")
             running = False
         except PrawcoreException as e:
             print(f"Error: {e}")
